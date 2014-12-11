@@ -39,7 +39,7 @@
             {
                 return new ExtraParams
                            {
-                               VK_CHARSET = _collection["VK_CHARSET"],
+                               VK_ENCODING = _collection["VK_ENCODING"],
                                VK_LANG = _collection["VK_LANG"]
                            };
             }

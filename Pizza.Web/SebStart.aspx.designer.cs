@@ -112,15 +112,6 @@ namespace Pizza.Web {
         protected global::System.Web.UI.WebControls.Label VK_MSG;
         
         /// <summary>
-        /// VK_MAC control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label VK_MAC;
-        
-        /// <summary>
         /// VK_RETURN control.
         /// </summary>
         /// <remarks>
@@ -128,6 +119,33 @@ namespace Pizza.Web {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label VK_RETURN;
+        
+        /// <summary>
+        /// VK_CANCEL control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label VK_CANCEL;
+        
+        /// <summary>
+        /// VK_DATETIME control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label VK_DATETIME;
+        
+        /// <summary>
+        /// VK_MAC control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label VK_MAC;
         
         /// <summary>
         /// VK_LANG control.
@@ -139,13 +157,13 @@ namespace Pizza.Web {
         protected global::System.Web.UI.WebControls.Label VK_LANG;
         
         /// <summary>
-        /// VK_CHARSET control.
+        /// VK_ENCODING control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label VK_CHARSET;
+        protected global::System.Web.UI.WebControls.Label VK_ENCODING;
         
         /// <summary>
         /// Button1 control.

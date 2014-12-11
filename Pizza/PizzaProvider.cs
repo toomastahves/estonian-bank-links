@@ -5,27 +5,21 @@
 
     public abstract class PizzaProvider
     {
-        public abstract string ServiceUrl { get; }
-
+        public abstract string ServiceUrl { get; set; }
         public abstract string ReturnUrl { get; set; }
-
         public abstract string CancelUrl { get; set; }
-
-        public abstract string Login { get; set; }
-
         public abstract string FileCert { get; set; }
-
         public abstract string FileKey { get; set; }
-
         public abstract string KeySecret { get; set; }
-
-        public abstract string Encoding { get; }
-
+        public abstract string Encoding { get; set; }
         public abstract string SenderId { get; set; }
-
         public abstract string AccountNo { get; set; }
-
         public abstract string AccountName { get; set; }
+
+        public string DateTime
+        {
+            get { return System.DateTime.Now.ToString("yyyy-MM-ddTHH:mm:sszz00"); }
+        }
 
         public static IFormatProvider AmountFormatInfo
         {
@@ -34,12 +28,14 @@
                 return new NumberFormatInfo
                            {
                                CurrencyDecimalDigits = 2,
-                               NumberDecimalSeparator = "."
+                               NumberDecimalSeparator = ".",
+                               CurrencyGroupSeparator = string.Empty,
+                               NumberGroupSeparator = string.Empty
                            };
             }
         }
 
-        public abstract void SignPaymentRequest(ref PaymentRequest payment, int service = 1001);
+        public abstract void SignPaymentRequest(ref PaymentRequest payment, int service = 1011);
 
         public abstract bool VerifyPaymentResponse(PaymentResponse payment);
 
@@ -47,7 +43,7 @@
         {
             switch (response)
             {
-                case "1101":
+                case "1111":
                     return new string[15]
                                {
                                    "VK_SERVICE",
@@ -64,9 +60,9 @@
                                    "VK_SND_NAME",
                                    "VK_REF",
                                    "VK_MSG",
-                                   "VK_T_DATE"
+                                   "VK_T_DATETIME"
                                };
-                case "1901":
+                case "1911":
                     return new string[7]
                                {
                                    "VK_SERVICE",

@@ -31,25 +31,31 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BouncyCastle.Crypto">
-      <HintPath>lib\BouncyCastle.Crypto.dll</HintPath>
+    <Reference Include="BouncyCastle.Crypto, Version=1.7.4137.9688, Culture=neutral, PublicKeyToken=a4292a325f69b123, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\BouncyCastle.1.7.0\lib\Net40-Client\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClientSelfPostForm.cs" />
+    <Compile Include="Enums.cs" />
     <Compile Include="ExtraParams.cs" />
+    <Compile Include="PaymentEncoder.cs" />
     <Compile Include="PaymentRequest.cs" />
     <Compile Include="PaymentResponse.cs" />
     <Compile Include="PizzaProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RequestSignParams.cs" />
     <Compile Include="ResponseSignParams.cs" />
-    <Compile Include="Sampo.cs" />
     <Compile Include="Seb.cs" />
     <Compile Include="Secret.cs" />
-    <Compile Include="Swedbank.cs" />
     <Compile Include="Util.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
