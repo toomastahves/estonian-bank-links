@@ -1,0 +1,9 @@
+syntax: glob
+[Bb]in
+*.user
+_ReSharper**
+**/obj/
+**/bin/
+**.suo
+packages/**
+bin/
