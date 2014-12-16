@@ -25,11 +25,11 @@ namespace Pizza.Web
             // Step 2 - Do bank settings
             PizzaProvider bank = new Seb()
             {
-                FileCert = @"\Certificates\seb\bank_cert.pem",
-                FileKey = @"\Certificates\seb\user_key.pem",
-                ReturnUrl = "http://localhost:4306/Pizza.Web/SebReturn.aspx",
-                CancelUrl = "http://localhost:4306/Pizza.Web/SebReturn.aspx",
-                SenderId = "uid517315",
+                FileCert = @"\Certificates\my\bank_cert.pem",
+                FileKey = @"\Certificates\my\user_key.pem",
+                ReturnUrl = "http://pangalink.net",
+                CancelUrl = "http://pangalink.net",
+                SenderId = "uid517917",
                 AccountNo = "EE871600161234567892",
                 AccountName = "A B",
                 ServiceUrl = "https://pangalink.net/banklink/seb-common",
@@ -39,7 +39,7 @@ namespace Pizza.Web
             // Step 3 - Sign a payment
             bank.SignPaymentRequest(ref payment);
 
-            /*VK_SERVICE.Text = payment.SignParams.VK_SERVICE;
+            VK_SERVICE.Text = payment.SignParams.VK_SERVICE;
             VK_VERSION.Text = payment.SignParams.VK_VERSION;
             VK_SND_ID.Text = payment.SignParams.VK_SND_ID;
             VK_STAMP.Text = payment.SignParams.VK_STAMP;
@@ -57,7 +57,8 @@ namespace Pizza.Web
             VK_MAC.Text = payment.SignParams.VK_MAC;
 
             VK_LANG.Text = payment.ExtraParams.VK_LANG;
-            VK_ENCODING.Text = payment.ExtraParams.VK_ENCODING;*/
+            VK_ENCODING.Text = payment.ExtraParams.VK_ENCODING;
+            
             var paymentForm = new ClientSelfPostForm { ActionUrl = bank.ServiceUrl, Method = "POST" };
             paymentForm["VK_SERVICE"] = payment.SignParams.VK_SERVICE;
             paymentForm["VK_VERSION"] = payment.SignParams.VK_VERSION;
@@ -76,7 +77,7 @@ namespace Pizza.Web
             paymentForm["VK_LANG"] = payment.ExtraParams.VK_LANG;
             paymentForm["VK_ENCODING"] = payment.ExtraParams.VK_ENCODING;
 
-            HttpContext.Current.Response.Write(paymentForm.Build());
+            //HttpContext.Current.Response.Write(paymentForm.Build());
 
             // Step 4 - Send a payment
             //Button1.PostBackUrl = bank.ServiceUrl;

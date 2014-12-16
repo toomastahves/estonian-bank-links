@@ -1,0 +1,30 @@
+﻿@model MVCPayment.Models.PaymentRequest
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<form action="https://pangalink.net/banklink/seb-common" method="POST">
+
+    <input name="VK_SERVICE" value="@Model.SignParams.VK_SERVICE">
+    <input name="VK_VERSION" value="@Model.SignParams.VK_VERSION">
+    <input name="VK_SND_ID" value="@Model.SignParams.VK_SND_ID">
+    <input name="VK_STAMP" value="@Model.SignParams.VK_STAMP">
+    <input name="VK_AMOUNT" value="@Model.SignParams.VK_AMOUNT">
+    <input name="VK_CURR" value="@Model.SignParams.VK_CURR">
+
+    <input name="VK_ACC" value="@Model.SignParams.VK_ACC">
+    <input name="VK_NAME" value="@Model.SignParams.VK_NAME">
+    <input name="VK_REF" value="@Model.SignParams.VK_REF">
+    <input name="VK_MSG" value="@Model.SignParams.VK_MSG">
+    <input name="VK_RETURN" value="@Model.SignParams.VK_RETURN">
+    <input name="VK_CANCEL" value="@Model.SignParams.VK_CANCEL">
+
+    <input name="VK_DATETIME" value="@Model.SignParams.VK_DATETIME">
+    <input name="VK_MAC" value="@Model.SignParams.VK_MAC">
+    <input name="VK_LANG" value="@Model.ExtraParams.VK_LANG">
+    <input name="VK_ENCODING" value="@Model.ExtraParams.VK_ENCODING">
+
+    <input type="submit" value="Maksan">
+
+</form>
